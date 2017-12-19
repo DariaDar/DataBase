@@ -1,0 +1,99 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block headblock %}<title>Добро пожаловать</title> {% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" media="all" href="{% static "/css/style.css" %}" type="text/css">
+</head>
+
+
+<body>
+    <header>
+        <div class="container">
+            <div class="heading clearfix">
+                  <nav>
+                        <ul class="menu">
+                            <li>
+                                <a href="/hello/">Главная</a>
+                            </li>
+                            <li>
+                                <a href="/showfacts/">Просмотреть</a>
+                            </li>
+                            <li>
+                                <a href="/update/">Редактировать</a>
+                            </li>
+                            <li>
+                                <a href="/visitors/">Сортировать</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+            <div class="titles">
+                    <div class="titles__first">
+                        Добро пожаловать в картинную галерею
+                    </div>
+                    <h1 id="ntm">
+                        Рады видеть вас
+                    </h1>
+                </div>
+            <div class="button">
+                   <form action="/hello/" enctype="multipart/form-data" method="POST">
+                       {% csrf_token %}
+                       <input type="hidden" name="q" value="load">
+                       <input id="load" type="submit" value="Загрузить данные">
+                    </form>
+                </div>
+        </div>
+    </header>
+{% block bodyblock %} {% endblock %}
+    {% block sectionblock %}
+    <section>
+        <div class="container">
+              <div class="title">
+                    <h2>
+                        Создать факт
+                    </h2>
+              </div>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="hidden" name="q" value="save">
+
+            <div id="create_fact">
+            <div class="entity_list">
+                <label>Художник</label>
+
+                  <select name = "artist" required>
+                      {% for artist in facts.artists %}
+                          <option value="{{ artist.0 }}">{{ artist.1 }}</option>
+                      {% endfor %}
+                  </select>
+            </div>
+            <div class="entity_list">
+                 <label>Картина</label>
+                 <select name = "paint" required>
+                      {% for paint in facts.paints %}
+                          <option value="{{ paint.0 }}">{{ paint.1 }}</option>
+                      {% endfor %}
+                  </select>
+            </div>
+            <div class="entity_list">
+                 <label>Посетитель</label>
+                 <select name = "visitor" required>
+                      {% for visitor in facts.visitors %}
+                          <option value="{{ visitor.0 }}">{{ visitor.1 }}</option>
+                      {% endfor %}
+                  </select>
+            </div>
+            <div class="button">
+              <input id="load" type="submit" value="Добавить факт">
+            </div>
+            </div>
+        </form>
+        </div>
+    </section>
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,65 @@
+{% extends "gallery/base.html" %}
+{% load staticfiles %}
+
+{% block headblock %}
+    <title>Просмотр таблицы</title>
+    <link rel="stylesheet" media="all" href="{% static "/css/pages.css" %}" type="text/css">
+{% endblock %}
+
+{% block titleblock %} Редактирование таблицы фактов{% endblock %}
+{% block sectionname %} Таблица фактов {% endblock %}
+
+{% block bodyblock %}
+    <div class="table">
+
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Художник</th>
+                <th>Картина</th>
+                <th>Посетитель</th>
+            </tr>
+        {% for entity in facts.entities %}
+                 <form method="POST" id="update">
+                      {% csrf_token %}
+                <tr>
+                    <td>{{ entity.0 }}</td>
+                    <td>
+                        <select name="artist" required>
+                            {% for artist in facts.artists %}
+                                <option {% if artist.1 == entity.1 %} selected value="{{ artist.0 }}"{% else %} value="{{ artist.0 }}"{% endif %}>
+                                        {{ artist.1 }}</option>
+                            {% endfor %}
+                        </select>
+
+                    </td>
+                    <td>
+                        <select name="paint" required>
+                            {% for paint in facts.paints %}
+                                <option {% if paint.1 == entity.2 %} selected value="{{ paint.0 }}"{% else %} value="{{ paint.0 }}" {% endif %}>
+                                    {{ paint.1 }}
+                                </option>
+                            {% endfor %}
+                        </select>
+
+                    </td>
+                    <td>
+                        <select name="visitor" required>
+                            {% for visitor in facts.visitors %}
+                                <option {% if visitor.1 == entity.3 %}selected value="{{ visitor.0 }}"
+                                        {% else %}value="{{ visitor.0 }}"{% endif %}>{{ visitor.1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </td>
+                    <td>
+                        <input type="hidden" name="id" value="{{ entity.0 }}">
+                        <input type="submit" class="btn btn-success" value="Обновить">
+                    </td>
+                </tr>
+                 </form>
+            {% endfor %}
+
+        </table>
+
+    </div>
+{% endblock %}

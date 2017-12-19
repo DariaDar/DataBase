@@ -1,0 +1,31 @@
+{
+  "visitors": {
+    "visitor": [
+      {
+        "visitor_name": "Sam Lake",
+        "email": "sammy@mymail.com",
+        "student":"true"
+      },
+      {
+        "visitor_name": "Lili Collins",
+        "email": "lovelyli25@mymail.com",
+        "student":"false"
+      },
+      {
+        "visitor_name": "Grace Winter",
+        "email": "gwinter@mymail.com",
+        "student":"true"
+      },
+      {
+        "visitor_name": "Mike Roberts",
+        "email": "robertsmile@mymail.com",
+        "student":"false"
+      },
+      {
+        "visitor_name": "Harry Hall",
+        "email": "harold@mymail.com",
+        "student":"true"
+      }
+    ]
+  }
+}

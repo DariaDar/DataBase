@@ -1,0 +1,162 @@
+header {
+    background: url(../img/van.jpg) no-repeat center top / cover;
+    filter: grayscale(65%);
+    padding-bottom: 160px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+}
+
+.container {
+    width: 930px;
+    margin: 0 auto; /* четко по центру*/
+}
+
+nav {
+    float: right;
+    margin-top: 50px;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.menu li {
+    float: left;
+    display: block;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 41px;
+}
+
+.menu li a:hover {
+    color: #764e0b;
+}
+
+.titles__first {
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 180px;
+}
+
+h1 {
+    font-size: 75px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px;
+}
+
+.title {
+    padding-top: 115px;
+}
+
+.title h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* TABLE */
+.table {
+    padding: 10px 50px 50px 50px;
+    margin-left: 50px;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #ECE9E0;
+    color: #656665;
+    border: 16px solid #ECE9E0;
+    border-radius: 20px;
+}
+
+th {
+    font-size: 18px;
+    padding: 10px;
+}
+
+td {
+    background: #F5D7BF;
+    padding: 10px;
+}
+
+/*TABLE*/
+
+.visitor_search {
+    padding: 50px;
+}
+
+.search {
+    width: 300px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+h3 {
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.paint_search {
+    padding-bottom: 80px
+}
+
+select {
+    text-decoration: none;
+}
+
+option {
+    text-decoration: none;
+}
+
+.btn-success {
+    background-color: #8d857f;
+    border-color: #8d857f;
+}
+
+.btn-success:hover{
+    background-color: #544d4a;
+    border-color: #544d4a;
+}
+
+.btn-success:focus{
+    background-color: #544d4a;
+    border-color: #544d4a;
+}
+.btn-success:active{
+    background-color: #544d4a;
+    border-color: #544d4a;
+}

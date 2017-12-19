@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    color: #222;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+header {
+    background: url(../img/header.jpg) no-repeat center top / cover;
+    filter: grayscale(65%);
+    padding-bottom: 160px;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    width: 100%;
+    clear: both;
+}
+
+.container {
+    width: 930px;
+    margin: 0 auto; /* четко по центру*/
+}
+
+nav {
+    float: right;
+    margin-top: 50px;
+}
+
+.menu {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.menu li {
+    float: left;
+    display: block;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 41px;
+}
+
+.menu li a:hover {
+    color: #764e0b;
+}
+
+.titles__first {
+    font-size: 40px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 180px;
+}
+
+h1 {
+    font-size: 75px;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px;
+}
+
+.button {
+    background: beige;
+    color: #484543;
+    border-radius: 3px;
+    display: block;
+    width: 240px;
+    padding: 20px 0; /* 1 - слева/снизу 2 - справа/сверху*/
+    text-decoration: none;
+    margin-top: 50px;
+    margin: 0 auto;
+}
+
+.button #load {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: beige;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-left: 13px;
+}
+
+.title {
+    padding-top: 115px;
+    padding-bottom: 50px;
+}
+
+.title h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#create_fact {
+    padding: 50px;
+    background-color: #fdfff4;
+}
+
+label {
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.entity_list {
+    text-align: center;
+    display: inline;
+    padding: 15px;
+    background-color: beige;
+}
+
+option {
+    border: none;
+    background-color: beige;
+}

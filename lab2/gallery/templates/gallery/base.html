@@ -1,0 +1,57 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    {% block headblock %}{% endblock %}
+</head>
+
+
+<body>
+ <header>
+        <div class="container">
+            <div class="heading clearfix">
+                  <nav>
+                        <ul class="menu">
+                            <li>
+                                <a href="/hello/">Главная</a>
+                            </li>
+                            <li>
+                                <a href="/showfacts/">Просмотреть</a>
+                            </li>
+                            <li>
+                                <a href="/update/">Редактировать</a>
+                            </li>
+                            <li>
+                                <a href="/visitors/">Сортировать</a>
+                            </li>
+                        </ul>
+                    </nav>
+            </div>
+            <div class="titles">
+                    <div class="titles__first">
+                      Галерея
+                    </div>
+                    <h1 id="ntm">
+                       {% block titleblock %} Рады видеть вас{% endblock %}
+                    </h1>
+                </div>
+        </div>
+ </header>
+
+ <section>
+  <div class="container">
+              <div class="title">
+                    <h2>
+                        {% block sectionname %}
+                            Табличка
+                        {% endblock %}
+                    </h2>
+              </div>
+    {% block bodyblock %} {% endblock %}
+  </div>
+  </section>
+{% block sectionblock %} {% endblock %}
+</body>
+</html>

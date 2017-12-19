@@ -1,0 +1,41 @@
+{
+  "paints": {
+    "paint": [
+      {
+        "paint_name": "Ship in the Stormy Sea",
+        "artist": "Ivan Aivazovsky",
+        "style": "Romanticism",
+        "technique": "watercolor",
+        "date": "1887"
+      },
+      {
+        "paint_name": "Poppies",
+        "artist": "Claude Monet",
+        "style": "Impressionism",
+        "technique": "oil",
+        "date": "1873"
+      },
+      {
+        "paint_name": "The Persistence of Memory",
+        "artist": "Salvador Dali",
+        "style": "Surrealism",
+        "technique": "oil",
+        "date": "1931"
+      },
+      {
+        "paint_name": "The Starry Night",
+        "artist": "Vincent van Gogh",
+        "style": "Post-impressionism",
+        "technique": "oil",
+        "date": "1888"
+      },
+      {
+        "paint_name": "Portrait of Francoise",
+        "artist": "Pablo Picasso",
+        "style": "Modern",
+        "technique": "pencil",
+        "date": "1946"
+      }
+    ]
+  }
+}

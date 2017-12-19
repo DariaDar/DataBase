@@ -1,0 +1,142 @@
+{% extends "gallery/base.html" %}
+{% load staticfiles %}
+
+{% block headblock %}
+    <title>Поиск студентов</title>
+    <link rel="stylesheet" media="all" href="{% static "/css/pages.css" %}" type="text/css">
+{% endblock %}
+
+{% block titleblock %} Поиск истинных студентов{% endblock %}
+{% block sectionname %} Найти преступника {% endblock %}
+
+{% block bodyblock %}
+
+    <div class="visitor_search">
+        <div class="search">
+            <form method="POST">
+                <input type="hidden" name="visitor_search" value="search">
+                {% csrf_token %}
+                <h2>Правда или действие?</h2>
+                <select name="bool_f">
+                    <option value="true">True</option>
+                    <option value="false">False</option>
+                </select>
+                <input type="submit" class="btn btn-success" value="Найти">
+            </form>
+        </div>
+
+        {% if objects.visitors != null %}
+            <div class="table">
+                <table>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Имя постетителя</th>
+                        <th>Почта</th>
+                        <th>Студент</th>
+                    </tr>
+                    {% for visitor in objects.visitors %}
+                        <tr>
+                            <td>{{ visitor.0 }}</td>
+                            <td>
+                                {{ visitor.1 }}
+                            </td>
+                            <td>{{ visitor.2 }}</td>
+                            <td>{{ visitor.3 }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        {% else %}
+            <h3>Нет результатов</h3>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+{% block sectionblock %}
+    <section>
+        <div class="container">
+            <div class="paint_search">
+                <div class="search">
+                    <form method="POST">
+                        <input type="hidden" name="paint_search" value="technique">
+                        {% csrf_token %}
+                        <h2>Техника:</h2>
+                        <select name="tech_select">
+                            {% for tech in objects.technique %}
+                                <option value="{{ tech.0 }}">{{ tech.0 }}</option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" class="btn btn-success" value="Найти">
+                    </form>
+                </div>
+                {% if objects.paints != null %}
+                    <div class="table">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Картина</th>
+                            <th>Стиль</th>
+                            <th>Дата создания</th>
+                            <th>Техника</th>
+                        </tr>
+                        {% for paint in objects.paints %}
+                            <tr>
+                                <td>{{ paint.0 }}</td>
+                                <td>{{ paint.1 }}</td>
+                                <td>{{ paint.2 }}</td>
+                                <td>{{ paint.3 }}</td>
+                                <td>{{ paint.5 }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% else %} <h3>Нет результатов</h3> {% endif %}
+                </div>
+            </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="text_search">
+                <div class="search">
+                    <form method="POST">
+                        <input type="hidden" name="text_search" value="y">
+                        {% csrf_token %}
+                        <h2>Поиск:</h2>
+                        <select name="text_select">
+                            <option value="word">Слово не входит</option>
+                            <option value="phrase">Целая фраза</option>
+                        </select>
+                        <input type="text" name="words">
+                        <input type="submit" class="btn btn-success" value="Найти">
+                    </form>
+                </div>
+            </div>
+
+            <div class="text_search">
+                {% if objects.search_result != null %}
+                    <div class="table">
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Художник</th>
+                            <th>Дата рождения</th>
+                            <th>Место рождения</th>
+                            <th>Биография</th>
+                        </tr>
+                        {% for artist in objects.search_result %}
+                            <tr>
+                                <td>{{ artist.0 }}</td>
+                                <td>{{ artist.1 }}</td>
+                                <td>{{ artist.2 }}</td>
+                                <td>{{ artist.3 }}</td>
+                                <td>{{ artist.4 }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                {% else %} <h3>Нет результатов</h3> {% endif %}
+                </div>
+            </div>
+    </section>
+
+{% endblock %}

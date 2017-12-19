@@ -1,0 +1,36 @@
+{
+  "artists": {
+    "artist": [
+      {
+        "artist_name": "Vincent van Gogh",
+        "birthdate": "1853-04-30",
+        "birthplace": "Netherlands",
+        "biography": "Vincent Willem van Gogh (March 30, 1853 to July 29, 1890) was a post-impressionist painter whose work, notable for its beauty, emotion and color, highly influenced 20th-century art. He struggled with mental illness, and remained poor and virtually unknown throughout his life. Van Gogh died in France at age 37 from a self-inflicted gunshot wound."
+      },
+      {
+        "artist_name": "Salvador Dali",
+        "birthdate": "1904-11-29",
+        "birthplace": "Spain",
+        "biography": "Dali was a skilled draftsman, best known for the striking and bizarre images in his surrealist work. His painterly skills are often attributed to the influence of Renaissance masters.[3][4] His best-known work, The Persistence of Memory, was completed in August 1931. Dali's expansive artistic repertoire included film, sculpture, and photography, in collaboration with a range of artists in a variety of media."
+      },
+      {
+        "artist_name": "Claude Monet",
+        "birthdate": "1840-11-14",
+        "birthplace": "France",
+        "biography": "Founder of French Impressionist painting, and the most consistent and prolific practitioner of the movement's philosophy of expressing one's perceptions before nature, especially as applied to plein-air landscape painting. The term 'Impressionism' is derived from the title of his painting Impression, soleil levant (Impression, Sunrise), which was exhibited in 1874 in the first of the independent exhibitions mounted by Monet and his associates as an alternative to the Salon de Paris."
+      },
+      {
+        "artist_name": "Ivan Aivazovsky",
+        "birthdate": "1817-07-29",
+        "birthplace": "Russian Empire",
+        "biography": "Romantic painter who is considered one of the greatest masters of marine art. Baptized as Hovhannes Aivazian, Aivazovsky was born into an Armenian family in the Black Sea port of Feodosia in Crimea and was mostly based there.One of the most prominent Russian artists of his time, Aivazovsky was also popular outside Russia. He held numerous solo exhibitions in Europe and the United States. During his almost 60-year career, he created around 6,000 paintings, making him one of the most prolific artists of his time."
+      },
+      {
+        "artist_name":"Pablo Picasso",
+        "birthdate": "1881-10-25",
+        "birthplace": "Spain",
+        "biography": "Picasso was a Spanish painter, sculptor, printmaker, ceramicist, stage designer, poet and playwright who spent most of his adult life in France. Regarded as one of the most influential artists of the 20th century, he is known for co-founding the Cubist movement, the invention of constructed sculpture,[3][4] the co-invention of collage, and for the wide variety of styles that he helped develop and explore. "
+      }
+    ]
+  }
+}

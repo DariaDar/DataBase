@@ -1,0 +1,48 @@
+{% extends "gallery/base.html" %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   {% block headblock %}
+    <title>Просмотр таблицы</title>
+    <link rel="stylesheet" media="all" href="{% static "/css/pages.css" %}" type="text/css">
+   {% endblock %}
+
+</head>
+
+{% block titleblock %} Просмотр таблицы фактов{% endblock %}
+{% block sectionname %} Таблица фактов {% endblock %}
+
+{% block bodyblock %}
+             <div class="table">
+                <table>
+
+                <tr>
+                  <th>ID</th>
+                  <th>Художник</th>
+                  <th>Картина</th>
+                  <th>Посетитель</th>
+                  </tr>
+                    {% for entity in facts %}
+                 <tr>
+                  <td>{{ entity.0 }}</td>
+                  <td>
+                      {{ entity.1 }}
+                  </td>
+                  <td>{{ entity.2 }}</td>
+                  <td>{{ entity.3 }}</td>
+                  <td><form method="POST">
+                      {% csrf_token %}
+                      <input type="hidden" name="id" value="{{ entity.0 }}">
+                      <input type="submit" class="btn btn-success" value="Удалить"></form>
+                  </td>
+                 </tr>
+                    {% endfor %}
+
+                </table>
+            </div>
+
+{% endblock %}
+</html>
